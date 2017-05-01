@@ -11,7 +11,6 @@ class SnippetWell extends Component {
 	render() {
 		return (
 			<div className="SnippetWell">
-			SnippetWell
 			</div>
 		)
 	}
