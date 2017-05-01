@@ -1,7 +1,7 @@
 {
   "name": "snipstr",
   "version": "1.0.0",
-  "description": "sniptr",
+  "description": "snipstr",
   "engines": {
     "node": "6.10.0",
     "npm": "3.10.10"
