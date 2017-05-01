@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+import FilterBoard from './FilterBoard';
+import SelectorList from './SelectorList';
+import SnippetWell from './SnippetWell';
+import Header from './Header';
 
 import '../assets/stylesheets/base.scss';
 
 
-const App = ({ name }) => {
-  return (
-    <h1>Hello, {name}!</h1>
-  );
-};
+class App extends Component {
+	constructor() {
+		super();
 
-App.propTypes = {
-  name: PropTypes.string,
-};
+		this.state = {}
+
+		// REMEMBER TO .bind(this) ON ALL METHODS HERE:
+
+
+	}
+
+	ComponentDidMount() {}
+
+	ComponentDidUpdate() {}
+
+	render() {
+		return (
+			<div className="App">
+				<Header />
+				<FilterBoard />
+				<SelectorList />
+				<SnippetWell />
+			</div>
+		)
+	}
+}
 
 export default App;
