@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import FilterBoard from './FilterBoard';
-import SelectorList from './SelectorList';
-import SnippetWell from './SnippetWell';
-import Header from './Header';
+import FilterBoard from './FilterBoard.jsx';
+import SelectorList from './SelectorList.jsx';
+import SnippetWell from './SnippetWell.jsx';
+import Header from './Header.jsx';
 
 import '../assets/stylesheets/base.scss';
 
