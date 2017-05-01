@@ -11,6 +11,7 @@ class SelectorList extends Component {
 	render() {
 		return (
 			<div className="SelectorList">
+			SelectorList
 			</div>
 		)
 	}

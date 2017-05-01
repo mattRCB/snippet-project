@@ -11,6 +11,7 @@ class FilterBoard extends Component {
 	render() {
 		return (
 			<div className="FilterBoard">
+			FilterBoard
 			</div>
 		)
 	}
