@@ -1,3 +1,7 @@
+$main-color: #EEEEEE;
+$white: #FFF;
+$shadow: #AAA;
+
 html, body {
 	margin: 0px;
 	font-family: helvetica;
@@ -18,28 +22,41 @@ html, body {
 	order: 1;
 	flex: 0 1 100%;
 	height: 7%;
-	border: 2px solid #DDDDDD;
-
+	background-color: $main-color;
 }
-.FilterBoard, .SelectorList {
+.FilterBoard, .SelectorContainer {
 	flex: 1;
 	height: 93%;
-	border: 2px solid #DDDDDD;
+	background-color: $main-color;	
 }
 
 .FilterBoard {
 	order: 2;
 }
 
-.SelectorList {
+.SelectorContainer {
 	order: 3;
+	display: flex;
+	justify-content: center;
+
+}
+
+.SelectorList {
+	text-align: center;
+	width: 90%;
+	height: 95%;
+	border-radius: 2vh;
+	margin: auto;
+	background-color: $white;
+	box-shadow: 0px 0px 10px 2px $shadow inset;
+
 }
 
 .SnippetWell {
 	flex: 3;
 	order: 4;
 	height: 93%;
-	border: 2px solid #DDDDDD;
+	background-color: $main-color;
 }
 
 /*.SelectorList {
