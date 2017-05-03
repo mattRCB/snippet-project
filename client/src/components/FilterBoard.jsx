@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/base.scss';
+import PrivacyFilter from './PrivacyFilter';
 
 
 class FilterBoard extends Component {
@@ -11,7 +12,7 @@ class FilterBoard extends Component {
 	render() {
 		return (
 			<div className="FilterBoard">
-			FilterBoard
+				<PrivacyFilter />
 			</div>
 		)
 	}
