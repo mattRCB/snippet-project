@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/base.scss';
 import PrivacyFilter from './PrivacyFilter';
+import LanguageFilter from './LanguageFilter';
+import FrameworkFilter from './FrameworkFilter';
 
 
 class FilterBoard extends Component {
@@ -13,6 +15,8 @@ class FilterBoard extends Component {
 		return (
 			<div className="FilterBoard">
 				<PrivacyFilter />
+				<LanguageFilter />
+				<FrameworkFilter />
 			</div>
 		)
 	}
