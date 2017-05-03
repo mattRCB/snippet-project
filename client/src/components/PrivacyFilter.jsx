@@ -9,21 +9,23 @@ const PrivacyFilter = React.createClass({
             padding: '0 10px'
         };
 
-        return <div>
-            <h4>List Only:</h4>
-            <ButtonGroup value={this.state.value}
-                    buttons={[
-                        {value: 'red', content: 'red'},
-                        {value: 'green', content: 'green'},
-                        {value: 'blue', content: 'blue'}
-                    ]}
-                    onChange={this.handleChange} />
-            <span style={labelStyle}>Your useful text</span>
-        </div>;
+        return (
+            <div className="PrivacyFilter">
+                <h5>List Only:</h5>
+                
+                <ButtonGroup value={this.state.value}
+                        buttons={[
+                            {value: 'private', content: 'private'},
+                            {value: 'all', content: 'all'},
+                            {value: 'public', content: 'public'}
+                        ]}
+                        onChange={this.handleChange} />
+            </div>
+        )
     },
 
     getInitialState: function() {
-        return { value: 'red' };
+        return { value: 'private' };
     },
 
     handleChange: function(value) {

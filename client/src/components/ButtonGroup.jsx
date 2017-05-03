@@ -64,18 +64,14 @@ const ButtonGroup = React.createClass({
                 id={"" + i}
                 ref={"button" + i}
                 key={"" + i}
-                className="buttonStyle"
-                className={button.value === value && "selectedStyle"}
+                className={button.value === value ? "selectedStyle" : "buttonStyle"}
                 onClick={this.toggleSelect.bind(this, button.value)}
             >
                 {button.content || "" + button.value}
             </button>;
         });
 
-        const outerStyle = {
-            display: 'inline-block',
-        };
-        return <div style={outerStyle}>
+        return <div className="ButtonGroup">
             {buttons}
         </div>;
     },
