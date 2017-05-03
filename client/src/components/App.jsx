@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import FilterBoard from './FilterBoard.jsx';
-import SelectorList from './SelectorList.jsx';
-import SnippetWell from './SnippetWell.jsx';
-import Header from './Header.jsx';
+import FilterBoard from './FilterBoard';
+import SelectorContainer from './SelectorContainer';
+import SelectorList from './SelectorList';
+import SnippetWell from './SnippetWell';
+import Header from './Header';
 
 import '../assets/stylesheets/base.scss';
 
@@ -29,7 +30,7 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<FilterBoard />
-				<SelectorList />
+				<SelectorContainer />
 				<SnippetWell />
 			</div>
 		)

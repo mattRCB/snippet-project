@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/index.js'
+    './client/src/index.js'
   ],
   module: {
     loaders: [
@@ -16,13 +16,13 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.scss', '.css']
   },
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/client/dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
   devtool: 'cheap-eval-source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: './client/dist',
     hot: true
   },
   plugins: [

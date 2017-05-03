@@ -14,7 +14,7 @@
     "lint": "eslint src/**",
     "lint:watch": "esw -w src/**",
     "start": "NODE_ENV=production node server.js",
-    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js --require ignore-styles"
+    "test": "mocha --compilers js:babel-core/register ./client/test/**/*.spec.js --require ignore-styles"
   },
   "author": "",
   "license": "ISC",
