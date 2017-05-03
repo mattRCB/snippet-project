@@ -3,6 +3,7 @@ import '../assets/stylesheets/base.scss';
 import PrivacyFilter from './PrivacyFilter';
 import LanguageFilter from './LanguageFilter';
 import FrameworkFilter from './FrameworkFilter';
+import SearchFilter from './SearchFilter';
 
 
 class FilterBoard extends Component {
@@ -17,6 +18,7 @@ class FilterBoard extends Component {
 				<PrivacyFilter />
 				<LanguageFilter />
 				<FrameworkFilter />
+				<SearchFilter />
 			</div>
 		)
 	}
