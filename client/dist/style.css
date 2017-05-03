@@ -24,31 +24,55 @@ html, body {
   background-color: #EEEEEE; }
 
 .FilterBoard {
-  order: 2; }
-
-.FilterBoard .buttonStyle {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-left: 0;
-  cursor: pointer;
-  margin: 0;
-  padding: 5px 10px;
-  position: relative; }
-  .FilterBoard .buttonStyle :first-child {
-    border-left: 1px solid #ddd;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px; }
-  .FilterBoard .buttonStyle :last-child {
-    border-right: 1px solid #ddd;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
-  .FilterBoard .buttonStyle :hover {
-    background-color: #ddd; }
-  .FilterBoard .buttonStyle :focus {
-    z-index: 2; }
-
-.FilterBoard .selectedStyle {
-  background-color: #999; }
+  order: 2;
+  display: flex;
+  justify-content: center; }
+  .FilterBoard .PrivacyFilter {
+    display: flex;
+    flex-flow: column;
+    height: 20%;
+    width: 70%;
+    box-shadow: 0px 0px 2px 2px #AAA;
+    border-radius: 1vh; }
+    .FilterBoard .PrivacyFilter h5, .FilterBoard .PrivacyFilter .ButtonGroup {
+      display: flex;
+      justify-content: center; }
+    .FilterBoard .PrivacyFilter .buttonStyle {
+      background-color: #ddd;
+      border: 1px solid #ddd;
+      border-left: 0;
+      cursor: pointer;
+      margin: 0;
+      padding: 5px 10px; }
+      .FilterBoard .PrivacyFilter .buttonStyle:first-child {
+        border-left: 1px solid #ddd;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px; }
+      .FilterBoard .PrivacyFilter .buttonStyle:last-child {
+        border-right: 1px solid #ddd;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px; }
+      .FilterBoard .PrivacyFilter .buttonStyle:hover {
+        background-color: #fff; }
+      .FilterBoard .PrivacyFilter .buttonStyle:focus {
+        z-index: 2; }
+    .FilterBoard .PrivacyFilter .selectedStyle {
+      background-color: #999;
+      border: 1px solid #ddd;
+      border-left: 0;
+      cursor: pointer;
+      margin: 0;
+      padding: 5px 10px; }
+      .FilterBoard .PrivacyFilter .selectedStyle:first-child {
+        border-left: 1px solid #ddd;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px; }
+      .FilterBoard .PrivacyFilter .selectedStyle:last-child {
+        border-right: 1px solid #ddd;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px; }
+      .FilterBoard .PrivacyFilter .selectedStyle:focus {
+        z-index: 2; }
 
 .SelectorContainer {
   order: 3;
