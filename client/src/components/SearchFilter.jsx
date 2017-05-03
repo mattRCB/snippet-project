@@ -13,9 +13,9 @@ class SearchFilter extends Component {
 		return (
 			<div className="SearchFilter">
 				<h5>Filter by Search Term:</h5>
-				<input typeName="text" placeholder="Search Title" />
-				<input typeName="text" placeholder="Search Description" />
-				<input typeName="text" placeholder="Search Full Text" />
+				<input type="text" placeholder="Search Title" />
+				<input type="text" placeholder="Search Description" />
+				<input type="text" placeholder="Search Full Text" />
 				
 			</div>
 		)

@@ -113,10 +113,21 @@ html, body {
 	.FramerworkFilter {
 		order: 3;
 	}
+	.TagFilter {
+		order: 4;
+		overflow: scroll;
+		h5 {
+			padding-bottom: 1vh;
+		}
+		label {
+			margin: .5vh auto;
+			width: 80%;
+		}
+
+	}
 
 
-
-	.LanguageFilter, .FrameworkFilter {
+	.LanguageFilter, .FrameworkFilter, .TagFilter {
 		order: 2;
 		margin: 1vh auto;
 		width: 90%;
@@ -136,7 +147,7 @@ html, body {
 		}
 	}
 	.SearchFilter {
-		order: 4;
+		order: 5;
 		margin: 1vh auto;
 		width: 90%;
 		display: flex;
