@@ -26,6 +26,30 @@ html, body {
 .FilterBoard {
   order: 2; }
 
+.FilterBoard .buttonStyle {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-left: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  position: relative; }
+  .FilterBoard .buttonStyle :first-child {
+    border-left: 1px solid #ddd;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
+  .FilterBoard .buttonStyle :last-child {
+    border-right: 1px solid #ddd;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  .FilterBoard .buttonStyle :hover {
+    background-color: #ddd; }
+  .FilterBoard .buttonStyle :focus {
+    z-index: 2; }
+
+.FilterBoard .selectedStyle {
+  background-color: #999; }
+
 .SelectorContainer {
   order: 3;
   display: flex;
