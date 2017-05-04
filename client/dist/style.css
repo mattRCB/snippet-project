@@ -1,8 +1,19 @@
+.Header, .FilterBoard, .SelectorContainer, .PrivacyFilter, .LanguageFilter, .FrameworkFilter, .TagFilter, .SearchFilter {
+  -webkit-user-select: none;
+  /* Chrome, Opera, Safari */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */ }
+
 html, body {
   margin: 0px;
   font-family: helvetica;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 14px; }
 
 #root {
   height: 100%; }
@@ -166,11 +177,11 @@ html, body {
   height: 95%;
   width: 95%;
   margin: 1.5vh auto;
-  background-color: red;
   box-shadow: 0em 2em 2.5em .2em #333; }
   .SnippetText pre {
-    height: 100%;
-    margin-top: 0; }
+    height: 95%;
+    margin-top: 0;
+    margin-bottom: 1vh; }
 
 /*.SelectorList {
 	display: flex;
