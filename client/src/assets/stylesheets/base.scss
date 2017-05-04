@@ -46,6 +46,7 @@ html, body {
 	order: 2;
 	display: flex;
 	flex-direction: column;
+	font-size: 1.8vmin;
 	.PrivacyFilter {
 		margin: 2vh auto;
 		order: 1;
@@ -67,6 +68,7 @@ html, body {
 	        border-left: 0;
 	        cursor: pointer;
 	        padding: 5px 10px;
+	        font-size: 1.5vmin;
 
 	        &:first-child {
 	            border-left: 1px solid #ddd;
@@ -96,6 +98,7 @@ html, body {
 	        cursor: pointer;
 	        margin: 0;
 	        padding: 5px 10px;
+	        font-size: 1.5vmin;
 
 	        &:first-child {
 	            border-left: 1px solid #ddd;
@@ -153,6 +156,7 @@ html, body {
 		select {
 			margin: 1vh auto;
 			width: 80%;
+			font-size: 1.5vmin;
 		}
 	}
 	.SearchFilter {
@@ -171,6 +175,7 @@ html, body {
 		input {
 			margin: 1vh auto;
 			width: 80%;
+			font-size: 1.5vmin;
 		}
 	}
 }
@@ -189,6 +194,7 @@ html, body {
 	box-shadow: 0px 0px 16px 1px $shadow inset;
 	overflow-y: scroll;
 	border-radius: .5vh;
+	font-size: 1.5vmin;
 
 
 }
