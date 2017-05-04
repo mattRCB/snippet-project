@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/base.scss';
-
+import ListItem from './ListItem';
 
 class SelectorList extends Component {
 	constructor() {
@@ -11,6 +11,18 @@ class SelectorList extends Component {
 	render() {
 		return (
 			<div className="SelectorList">
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
+				<ListItem />
 			</div>
 		)
 	}

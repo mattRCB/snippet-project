@@ -177,6 +177,29 @@ html, body {
 	height: 100%;
 	background-color: $white;
 	box-shadow: 0px 0px 16px 1px $shadow inset;
+	overflow-y: scroll;
+
+}
+
+.ListItem {
+	border-bottom: 1px solid black;
+	display: flex;
+	padding: 1vh;
+	height: 8%;
+	.left {
+		text-align: left;
+		flex: 2;
+	}
+	.right {
+		text-align: right;
+		flex: 1;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+	}
+	.title {
+		font-weight: bold;
+	}
 
 }
 
