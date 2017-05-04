@@ -14,7 +14,7 @@ class ListItem extends Component {
 			<div className="ListItem">
 				<div className="left">
 					<div className="title">Snippet Title</div>
-					<p className="desc">Description text for this particular Snippet</p>
+					<p className="desc">Description text for this particular Snippet. Need to see what something longer might look like.</p>
 				</div>
 				<div className="right">
 					<div className="type">Private</div>

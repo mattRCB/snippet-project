@@ -188,7 +188,9 @@ html, body {
 	height: 8%;
 	.left {
 		text-align: left;
-		flex: 2;
+		flex: 3;
+		overflow: hidden;
+		padding-right: .5vw;
 	}
 	.right {
 		text-align: right;
