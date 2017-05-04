@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/base.scss';
+import SnippetText from './SnippetText';
 
 
 class SnippetWell extends Component {
@@ -11,7 +12,7 @@ class SnippetWell extends Component {
 	render() {
 		return (
 			<div className="SnippetWell">
-
+				<SnippetText />
 			</div>
 		)
 	}
