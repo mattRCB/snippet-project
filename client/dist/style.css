@@ -24,7 +24,7 @@ html, body {
 .FilterBoard, .SelectorContainer {
   flex: 1;
   height: 93%;
-  background-color: #EFEFEF; }
+  background-color: #EEE; }
 
 .FilterBoard {
   order: 2;
@@ -127,11 +127,13 @@ html, body {
 
 .SelectorList {
   text-align: center;
+  align-self: center;
   width: 100%;
-  height: 100%;
+  height: 96%;
   background-color: #FBFBFB;
   box-shadow: 0px 0px 16px 1px #AAA inset;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  border-radius: .5vh; }
 
 .ListItem {
   border-bottom: 1px solid black;
@@ -156,7 +158,19 @@ html, body {
   flex: 3;
   order: 4;
   height: 93%;
-  background-color: #EFEFEF; }
+  background-color: #EEE;
+  margin-top: 0;
+  display: flex; }
+
+.SnippetText {
+  height: 95%;
+  width: 95%;
+  margin: 1.5vh auto;
+  background-color: red;
+  box-shadow: 0em 2em 2.5em .2em #333; }
+  .SnippetText pre {
+    height: 100%;
+    margin-top: 0; }
 
 /*.SelectorList {
 	display: flex;

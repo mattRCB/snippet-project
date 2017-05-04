@@ -1,4 +1,4 @@
-$main-color: #EFEFEF;
+$main-color: #EEE;
 $white: #FBFBFB;
 $shadow: #AAA;
 
@@ -173,11 +173,14 @@ html, body {
 
 .SelectorList {
 	text-align: center;
+	align-self: center;
 	width: 100%;
-	height: 100%;
+	height: 96%;
 	background-color: $white;
 	box-shadow: 0px 0px 16px 1px $shadow inset;
 	overflow-y: scroll;
+	border-radius: .5vh;
+
 
 }
 
@@ -210,6 +213,23 @@ html, body {
 	order: 4;
 	height: 93%;
 	background-color: $main-color;
+	margin-top: 0;
+	display: flex;
+}
+
+.SnippetText {
+
+	height: 95%;
+	width: 95%;
+	margin: 1.5vh auto;
+	background-color: red;
+	box-shadow: 0em 2em 2.5em .2em #333;
+	pre {
+		height: 100%;
+		margin-top: 0;
+	}
+	code {
+	}
 }
 
 /*.SelectorList {
