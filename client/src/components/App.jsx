@@ -29,7 +29,7 @@ class App extends Component {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json'
 			},
-			body: {"title": "Snippet Test"}
+			body: JSON.stringify({title: "Snippet Test", desc: "This is a description"})
 		});
 	}
 
