@@ -24,19 +24,19 @@ dbConnection.connectToServer(function(err) {
 		next();
 	});
 
-	// SERVE BUNDLE.JS TO THE BROWSER
-	app.get('/', function(req, res) {
-	  res.sendFile(__dirname + '/client/dist/index.html');
-	});
+
 
 	// API ROUTES...
-	
-
 	app.post('/addsnippet', function(req, res) {
 		console.log("the addsnippet route was hit.");
 		db.snippets.insert(req.body, function(err) {
 			console.log("added a snippet.");
 		});
+	});
+
+	// SERVE BUNDLE.JS TO THE BROWSER
+	app.get('/', function(req, res) {
+	  res.sendFile(__dirname + '/client/dist/index.html');
 	});
 
 
@@ -45,10 +45,6 @@ dbConnection.connectToServer(function(err) {
 		? console.error(error)
 		: console.info(`Snipstr listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`)
 	});
-
-db.createCollection("snippets", function(err, collection){
-    if (!err) console.log("added the collection.");
-});
 
 
 });
