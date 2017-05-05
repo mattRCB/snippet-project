@@ -46,6 +46,11 @@ dbConnection.connectToServer(function(err) {
 		: console.info(`Snipstr listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`)
 	});
 
+db.createCollection("snippets", function(err, collection){
+    if (!err) console.log("added the collection.");
+});
+
+
 });
 
 
