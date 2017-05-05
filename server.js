@@ -11,7 +11,8 @@ dbConnection.connectToServer(function(err) {
 	const db = dbConnection.getDb();
 
 	app.use(logger("dev"));
-	app.use(bodyParser.json())
+	app.use(bodyParser());
+	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: false }));
 
 
@@ -28,9 +29,10 @@ dbConnection.connectToServer(function(err) {
 
 	// API ROUTES...
 	app.post('/addsnippet', function(req, res) {
-		console.log("the addsnippet route was hit.");
-		db.snippets.insert(req.body, function(err) {
-			console.log("added a snippet.");
+
+		db.collection('snippets').insert(req.body, function(err, result) {
+			res.json(result)
+
 		});
 	});
 
