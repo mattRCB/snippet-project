@@ -21,9 +21,19 @@ class App extends Component {
 
 	}
 
-	ComponentDidMount() {}
+	componentDidMount() {
+		console.log('fucking something');
+		fetch('https://snipstr.herokuapp.com/addsnippet', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: {'title': 'Snippet Test'}
+		});
+	}
 
-	ComponentDidUpdate() {}
+	componentDidUpdate() {}
 
 	render() {
 		return (
