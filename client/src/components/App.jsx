@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import FilterBoard from './FilterBoard';
-import SelectorContainer from './SelectorContainer';
 import SelectorList from './SelectorList';
 import SnippetWell from './SnippetWell';
 import Header from './Header';
@@ -32,7 +31,7 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<FilterBoard />
-				<SelectorContainer />
+				<SelectorList />
 				<SnippetWell />
 			</div>
 		)

@@ -27,7 +27,7 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="Header">
-				<button onClick={this.handleOpenModal}>Trigger Modal</button>
+				<button onClick={this.handleOpenModal}>Add Snippet</button>
 				<Modal 
 					isOpen={this.state.showModal}
 					contentLabel="onRequestClose Example"
@@ -36,7 +36,7 @@ class Header extends Component {
 					overlayClassName="overlay"
 				>
 					<p>Modal text!</p>
-					<button onClick={this.handleCloseModal}>Close Modal</button>
+					<button onClick={this.handleCloseModal}>Cancel</button>
 				</Modal>
 			</div>
 		)

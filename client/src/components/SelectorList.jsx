@@ -10,19 +10,21 @@ class SelectorList extends Component {
 
 	render() {
 		return (
-			<div className="SelectorList">
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
-				<ListItem />
+			<div className="SelectorContainer">
+				<div className="SelectorList">
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+					<ListItem />
+				</div>
 			</div>
 		)
 	}
