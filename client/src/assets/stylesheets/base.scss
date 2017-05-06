@@ -32,9 +32,16 @@ html, body {
 	order: 1;
 	z-index: 2;
 	flex: 0 1 100%;
+	display: flex;
+	flex-flow: column;
 	height: 7%;
 	background-color: #666666;
 	box-shadow: 0px 2px 8px grey;
+	button {
+		align-self: flex-end;
+		margin: 2.5vh 2.5vw;
+		font-size: 1.2vh
+	}
 }
 .FilterBoard, .SelectorContainer {
 	flex: 1;
@@ -209,7 +216,7 @@ html, body {
 		flex: 3;
 		overflow: hidden;
 		padding-right: .25vw;
-				display: flex;
+		display: flex;
 		flex-flow: column;
 		p {
 			font-size: .8vw;

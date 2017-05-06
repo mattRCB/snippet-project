@@ -27,7 +27,7 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="Header">
-				<button onClick={this.handleOpenModal}>Add Snippet</button>
+				<button className="addButton" onClick={this.handleOpenModal}>Add Snippet</button>
 				<Modal 
 					isOpen={this.state.showModal}
 					contentLabel="onRequestClose Example"
@@ -35,7 +35,7 @@ class Header extends Component {
 					className="modal"
 					overlayClassName="overlay"
 				>
-					<p>Modal text!</p>
+					<p>Add a snippet:</p>
 					<button onClick={this.handleCloseModal}>Cancel</button>
 				</Modal>
 			</div>
