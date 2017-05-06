@@ -8,7 +8,6 @@ module.exports = {
 		MongoClient.connect( "mongodb://scraper:eparcswen@ds157740.mlab.com:57740/newscrape_db", function( err, db ) {
 			_db = db;
 			if (!err) console.log("Connected to mongodb.");
-
 			return callback( err );
 		})
 	},

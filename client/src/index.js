@@ -2,4 +2,5 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './components/App.jsx';
 
-render(<App />, document.getElementById('root'));
+const props = {};
+render(<App {...props} />, document.getElementById('root'));

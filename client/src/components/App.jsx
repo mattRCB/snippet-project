@@ -18,22 +18,14 @@ class App extends Component {
 
 		// REMEMBER TO .bind(this) ON ALL METHODS HERE:
 
-
 	}
 
 	componentDidMount() {
-		console.log('fucking something');
-		fetch('https://snipstr.herokuapp.com/addsnippet', {
-			method: 'POST',
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({title: "Snippet Test2", desc: "This is a another description"})
-		});
+
 	}
 
 	componentDidUpdate() {}
+
 
 	render() {
 		return (
@@ -48,3 +40,16 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+{/*
+		fetch('https://snipstr.herokuapp.com/addsnippet', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({title: "Snippet Test2", desc: "This is a another description"})
+		});
+*/}
