@@ -6,7 +6,7 @@ const SelectorList = (props) => (
 	<div className="SelectorContainer">
 		<div className="SelectorList">
 			{props.snippets.map((snippet) => (
-				<ListItem snippet={snippet} />
+				<ListItem key={snippet.id} snippet={snippet} />
 			))}
 			
 		</div>
