@@ -1,28 +1,17 @@
-import React, { Component } from 'react';
-import '../assets/stylesheets/base.scss';
+import React from 'react'
+import '../assets/stylesheets/base.scss'
 
-
-
-class ListItem extends Component {
-	constructor() {
-		super();
-
-	}
-
-	render() {
-		return (
-			<div className="ListItem">
-				<div className="left">
-					<div className="title">Snippet Title</div>
-					<div className="desc">Description text for this particular Snippet. Need to see what something longer might look like.</div>
-				</div>
-				<div className="right">
-					<div className="type">Private</div>
-					<div className="lang">JavaScript</div>
-				</div>
-			</div>
-		)
-	}
-}
-
-export default ListItem;
+const ListItem = (props) => (
+	<div className="ListItem">
+		<div className="left">
+			<div className="title">{props.snippet.title}</div>
+			<div className="desc">{props.snippet.desc}</div>
+		</div>
+		<div className="right">
+			<div className="type">{props.snippet.type}</div>
+			<div className="lang">{props.snippet.lang}</div>
+		</div>
+	</div>
+)
+	
+export default ListItem
