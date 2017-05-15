@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import '../assets/stylesheets/base.scss'
 
 const ListItem = (props) => (
-	<div className="ListItem">
+	<div className="ListItem" onClick={props.selectSnippet}>
 		<div className="left">
 			<div className="title">{props.snippet.title}</div>
 			<div className="desc">{props.snippet.desc}</div>
@@ -13,5 +14,11 @@ const ListItem = (props) => (
 		</div>
 	</div>
 )
+
+ListItem.propTypes = {
+	snippet: React.PropTypes.object.isRequired,
+	selectSnippet: React.PropTypes.func.isRequired
+
+}
 	
 export default ListItem

@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-import FilterBoard from './FilterBoard';
-import SelectorList from './SelectorList';
-import SnippetWell from './SnippetWell';
-import Header from './Header';
+import FilterBoard from './FilterBoard'
+import SelectorList from './SelectorList'
+import SnippetWell from './SnippetWell'
+import Header from './Header'
 
-import '../assets/stylesheets/base.scss';
+import '../assets/stylesheets/base.scss'
 
 
 class App extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props)
 
-		this.state = {}
+		this.state = {
+			selectedSnippetID: 1
+		}
 
 		// REMEMBER TO .bind(this) ON ALL METHODS HERE:
+		this.selectSnippet = this.selectSnippet.bind(this);
 
 	}
 
@@ -25,20 +28,26 @@ class App extends Component {
 
 	componentDidUpdate() {}
 
+	selectSnippet(evt) {
+		evt.preventDefault();
+
+		console.log("Clicked somthing.");
+	}
+
 
 	render() {
 		return (
 			<div className="App">
 				<Header />
 				<FilterBoard />
-				<SelectorList snippets={snippets} />
+				<SelectorList selectSnippet={this.selectSnippet} snippets={snippets} />
 				<SnippetWell />
 			</div>
 		)
 	}
 }
 
-export default App;
+export default App
 
 
 
@@ -80,5 +89,5 @@ const snippets = [
 				type: "public",
 				lang: ""
 			})
-		});
+		})
 */}

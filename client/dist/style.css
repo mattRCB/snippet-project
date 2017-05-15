@@ -181,6 +181,8 @@ html, body {
     justify-content: space-between; }
   .ListItem .title {
     font-weight: bold; }
+  .ListItem .selected {
+    background-color: blue; }
 
 .SnippetWell {
   flex: 3;
