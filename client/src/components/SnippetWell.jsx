@@ -3,19 +3,14 @@ import '../assets/stylesheets/base.scss';
 import SnippetText from './SnippetText';
 
 
-class SnippetWell extends Component {
-	constructor() {
-		super();
+const SnippetWell = (props) => (
+	<div className="SnippetWell">
+		<SnippetText snippetText={props.snippetText}/>
+	</div>
+)
 
-	}
-
-	render() {
-		return (
-			<div className="SnippetWell">
-				<SnippetText />
-			</div>
-		)
-	}
+SnippetWell.propTypes = {
+	snippetText: React.PropTypes.string.isRequired
 }
 
 export default SnippetWell;

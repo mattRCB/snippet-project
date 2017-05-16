@@ -28,7 +28,6 @@ class App extends Component {
 	componentDidUpdate() {}
 
 	selectSnippet(evt) {
-		evt.preventDefault();
 		let snippetId = evt.target.getAttribute("data-snippetid")
 		this.setState({ selectedSnippetID: snippetId });
 		console.log(snippetId);
@@ -45,13 +44,16 @@ class App extends Component {
 					snippets={snippets}
 					crntSelection={this.state.selectedSnippetID}
 				/>
-				<SnippetWell />
+				<SnippetWell
+					snippetText={snippets.find(snippet => snippet.id == this.state.selectedSnippetID).body}
+				/>
 			</div>
 		)
 	}
 }
 
 export default App
+
 
 
 

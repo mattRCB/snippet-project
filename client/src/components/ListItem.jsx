@@ -9,13 +9,13 @@ const ListItem = (props) => (
 		data-snippetId={props.snippet.id}
 		onClick={props.selectSnippet}
 	>
-		<div className="left">
-			<div className="title">{props.snippet.title}</div>
-			<div className="desc">{props.snippet.desc}</div>
+		<div className="left" data-snippetId={props.snippet.id}>
+			<div className="title" data-snippetId={props.snippet.id}>{props.snippet.title}</div>
+			<div className="desc" data-snippetId={props.snippet.id}>{props.snippet.desc}</div>
 		</div>
-		<div className="right">
-			<div className="type">{props.snippet.type}</div>
-			<div className="lang">{props.snippet.lang}</div>
+		<div className="right" data-snippetId={props.snippet.id}>
+			<div className="type" data-snippetId={props.snippet.id}>{props.snippet.type}</div>
+			<div className="lang" data-snippetId={props.snippet.id}>{props.snippet.lang}</div>
 		</div>
 	</div>
 )
