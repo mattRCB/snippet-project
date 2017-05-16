@@ -24,10 +24,16 @@ class App extends Component {
 
 	componentDidMount() {
 		fetch('https://snipstr.herokuapp.com/snippets')
-		.then(function(res) {
-			console.log(res)
-		})
+			.then(res => res.json())
+			.then(snippetsCollection => this.setState({snippets}))
 	}
+
+
+
+
+
+
+	
 
 	componentDidUpdate() {}
 
