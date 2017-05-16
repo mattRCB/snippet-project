@@ -28,6 +28,12 @@ dbConnection.connectToServer(function(err) {
 
 
 	// API ROUTES...
+	app.get('/snippets', function(req, res) {
+		db.collection('snippets').find({}, function(err, allSnippets) {
+			error ? console.log(error) : res.json(allSnippets)
+		});
+	});
+
 	app.post('/addsnippet', function(req, res) {
 
 		db.collection('snippets').insert(req.body, function(err, result) {

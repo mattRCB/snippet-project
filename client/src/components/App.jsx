@@ -13,7 +13,8 @@ class App extends Component {
 		super(props)
 
 		this.state = {
-			selectedSnippetID: 1
+			selectedSnippetID: 1,
+			snippets: []
 		}
 
 		// REMEMBER TO .bind(this) ON ALL METHODS HERE:
@@ -22,7 +23,9 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-
+		fetch('https://snipstr.herokuapp.com/snippets')
+			.then(res => res.json())
+			.then(snippetsCollection => this.setState({snippets}))
 	}
 
 	componentDidUpdate() {}
@@ -41,7 +44,7 @@ class App extends Component {
 				<FilterBoard />
 				<SelectorList
 					selectSnippet={this.selectSnippet}
-					snippets={snippets}
+					snippets={this.state.snippets}
 					crntSelection={this.state.selectedSnippetID}
 				/>
 				<SnippetWell
