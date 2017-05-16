@@ -23,7 +23,12 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://snipstr.herokuapp.com/snippets')
+		fetch('https://snipstr.herokuapp.com/snippets', {
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			}
+		})
 			.then(res => res.json())
 			.then(snippetsCollection => this.setState({snippets}))
 	}
