@@ -23,21 +23,10 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://snipstr.herokuapp.com/addsnippet', {
-			method: 'POST',
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				title: "Snippet Test2",
-				body: "",
-				desc: "This is a another description",
-				type: "public",
-				lang: ""
-			})
+		fetch('https://snipstr.herokuapp.com/snippets')
+		.then(function(res) {
+			console.log(res)
 		})
-
 	}
 
 	componentDidUpdate() {}
