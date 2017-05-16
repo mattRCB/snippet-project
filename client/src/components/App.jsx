@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import FilterBoard from './FilterBoard'
 import SelectorList from './SelectorList'
 import SnippetWell from './SnippetWell'
@@ -30,8 +29,9 @@ class App extends Component {
 
 	selectSnippet(evt) {
 		evt.preventDefault();
-
-		console.log("Clicked somthing.");
+		let snippetId = evt.target.getAttribute("data-snippetid")
+		this.setState({ selectedSnippetID: snippetId });
+		console.log(snippetId);
 	}
 
 
@@ -40,7 +40,11 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<FilterBoard />
-				<SelectorList selectSnippet={this.selectSnippet} snippets={snippets} />
+				<SelectorList
+					selectSnippet={this.selectSnippet}
+					snippets={snippets}
+					crntSelection={this.state.selectedSnippetID}
+				/>
 				<SnippetWell />
 			</div>
 		)

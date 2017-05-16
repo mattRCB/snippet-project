@@ -11,6 +11,7 @@ const SelectorList = (props) => (
 					selectSnippet={props.selectSnippet}
 					key={snippet.id}
 					snippet={snippet}
+					crntSelection={props.crntSelection}
 				/>
 			))}
 			

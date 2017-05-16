@@ -234,10 +234,38 @@ html, body {
 	.title {
 		font-weight: bold;
 	}
-	.selected {
-		background-color: blue;
-	}
+}
 
+.selectedItem {
+	background-color: blue;
+	color: $white;
+	border-bottom: 1px solid $shadow;
+	display: flex;
+	padding: 1vh 1vw;
+	height: 8%;
+	.left {
+		text-align: left;
+		flex: 3;
+		overflow: hidden;
+		padding-right: .25vw;
+		display: flex;
+		flex-flow: column;
+		p {
+			font-size: .8vw;
+
+			margin-bottom: 0;
+		}
+	}
+	.right {
+		text-align: right;
+		flex: 1;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+	}
+	.title {
+		font-weight: bold;
+	}
 }
 
 .SnippetWell {

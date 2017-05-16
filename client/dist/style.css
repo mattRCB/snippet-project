@@ -181,8 +181,32 @@ html, body {
     justify-content: space-between; }
   .ListItem .title {
     font-weight: bold; }
-  .ListItem .selected {
-    background-color: blue; }
+
+.selectedItem {
+  background-color: blue;
+  color: #FBFBFB;
+  border-bottom: 1px solid #AAA;
+  display: flex;
+  padding: 1vh 1vw;
+  height: 8%; }
+  .selectedItem .left {
+    text-align: left;
+    flex: 3;
+    overflow: hidden;
+    padding-right: .25vw;
+    display: flex;
+    flex-flow: column; }
+    .selectedItem .left p {
+      font-size: .8vw;
+      margin-bottom: 0; }
+  .selectedItem .right {
+    text-align: right;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between; }
+  .selectedItem .title {
+    font-weight: bold; }
 
 .SnippetWell {
   flex: 3;

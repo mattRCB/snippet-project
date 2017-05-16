@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import '../assets/stylesheets/base.scss'
 
 const ListItem = (props) => (
-	<div className="ListItem" onClick={props.selectSnippet}>
+	<div
+		className="ListItem"
+		className={(props.snippet.id == props.crntSelection) ? "selectedItem" : "ListItem"}
+		data-snippetId={props.snippet.id}
+		onClick={props.selectSnippet}
+	>
 		<div className="left">
 			<div className="title">{props.snippet.title}</div>
 			<div className="desc">{props.snippet.desc}</div>
