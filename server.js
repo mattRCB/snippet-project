@@ -29,13 +29,10 @@ dbConnection.connectToServer(function(err) {
 
 	// API ROUTES...
 	app.get('/snippets', function(req, res) {
-		db.snippets.find({}, function(error, allSnippets) {
+		db.collection('snippets').find({}).toArray(function(error, allSnippets) {
 			if (error) {
 	        console.log(error);
-	      }
-	      // Otherwise, send json of the songs back to user
-	      // This will fire off the success function of the ajax request
-	      else {
+	      } else {
 	        res.json(allSnippets);
 	      }
 		});
