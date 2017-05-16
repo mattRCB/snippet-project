@@ -25,7 +25,7 @@ class App extends Component {
 	componentDidMount() {
 		fetch('https://snipstr.herokuapp.com/snippets')
 			.then(res => res.json())
-			.then(snippetsCollection => this.setState({snippets}))
+			.then(snippets => this.setState({snippets}))
 	}
 
 
@@ -33,7 +33,7 @@ class App extends Component {
 
 
 
-	
+
 
 	componentDidUpdate() {}
 
