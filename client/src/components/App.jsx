@@ -29,7 +29,9 @@ class App extends Component {
 				'Content-Type': 'application/json'
 			}
 		})
-			.then(console.log(res))
+			.then(function(res) {
+				console.log(res)
+			})
 
 	}
 
