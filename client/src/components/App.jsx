@@ -29,8 +29,8 @@ class App extends Component {
 				'Content-Type': 'application/json'
 			}
 		})
-			.then(res => res.json())
-			.then(snippetsCollection => this.setState({snippets}))
+			.then(console.log(res))
+
 	}
 
 	componentDidUpdate() {}
