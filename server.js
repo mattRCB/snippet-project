@@ -30,7 +30,7 @@ dbConnection.connectToServer(function(err) {
 	// API ROUTES...
 	app.get('/snippets', function(req, res) {
 		db.collection('snippets').find({}, function(err, allSnippets) {
-			error ? console.log(error) : res.json(allSnippets)
+			err ? console.log(err) : res.json(snippets)
 		});
 	});
 
