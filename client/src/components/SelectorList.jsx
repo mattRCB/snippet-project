@@ -9,7 +9,7 @@ const SelectorList = (props) => (
 			{props.snippets.map((snippet) => (
 				<ListItem
 					selectSnippet={props.selectSnippet}
-					key={snippet.id}
+					key={snippet._id}
 					snippet={snippet}
 					crntSelection={props.crntSelection}
 				/>

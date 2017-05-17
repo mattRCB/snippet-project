@@ -13,8 +13,23 @@ class App extends Component {
 		super(props)
 
 		this.state = {
-			selectedSnippetID: 1,
-			snippets: []
+			selectedSnippetID: "590cddce8cae850011340d33",
+			snippets: [
+				{
+					body
+					:
+					"import SelectorList from './SelectorList'",
+					desc
+					:
+					"This is a description",
+					title
+					:
+					"Snippet Test",
+					_id
+					:
+					"590cddce8cae850011340d33"
+				}
+			]
 		}
 
 		// REMEMBER TO .bind(this) ON ALL METHODS HERE:
@@ -28,19 +43,15 @@ class App extends Component {
 			.then(snippets => this.setState({snippets}))
 	}
 
+	componentDidUpdate() {
+		console.log(this.state.selectedSnippetID)
+		console.log(this.state.snippets)
 
-
-
-
-
-
-
-	componentDidUpdate() {}
+	}
 
 	selectSnippet(evt) {
 		let snippetId = evt.target.getAttribute("data-snippetid")
 		this.setState({ selectedSnippetID: snippetId });
-		console.log(snippetId);
 	}
 
 
@@ -54,8 +65,15 @@ class App extends Component {
 					snippets={this.state.snippets}
 					crntSelection={this.state.selectedSnippetID}
 				/>
+
+{/* NEED A CONDITIONAL WAY TO ALLOW <SnippetWell/> TO GET RENDERED ON INITIAL LOAD, 
+    I.E. BEFORE THE SNIPPETCOLLECTION IS POPULATED IN componentDidMount....
+    MAYBE THERE IS AN EARLIER LIFECYCLE METHOD I COULD USE INSTEAD OF componentDidMount....
+    Ultimately, must remove the static defaults I've put into STATE.
+ */}
+
 				<SnippetWell
-					snippetText={snippets.find(snippet => snippet.id == this.state.selectedSnippetID).body}
+					snippetText={this.state.snippets.find(snippet => snippet._id == this.state.selectedSnippetID).body}
 				/>
 			</div>
 		)
@@ -64,32 +82,6 @@ class App extends Component {
 
 export default App
 
-
-
-
-
-const snippets = [
-	{
-		id: 0,
-		title: "SnippetTest0",
-		body: "import SelectorList from './SelectorList'",
-		desc: "This is a test description. It's the one that shows an example of an ES6 import.",
-		type: "public",
-		lang: "JavaScript",
-		framework: "",
-		tags: []
-	},
-	{
-		id: 1,
-		title: "SnippetTest1",
-		body: "const ListItem = (props) => ()",
-		desc: "Here's another test description. This one just shows an ES6-style arrow function.",
-		type: "private",
-		lang: "JavaScript",
-		framework: "",
-		tags: []
-	}
-]
 
 {/*
 		fetch('https://snipstr.herokuapp.com/addsnippet', {

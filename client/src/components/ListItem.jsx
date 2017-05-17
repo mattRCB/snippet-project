@@ -5,17 +5,17 @@ import '../assets/stylesheets/base.scss'
 const ListItem = (props) => (
 	<div
 		className="ListItem"
-		className={(props.snippet.id == props.crntSelection) ? "selectedItem" : "ListItem"}
-		data-snippetId={props.snippet.id}
+		className={(props.snippet._id == props.crntSelection) ? "selectedItem" : "ListItem"}
+		data-snippetId={props.snippet._id}
 		onClick={props.selectSnippet}
 	>
-		<div className="left" data-snippetId={props.snippet.id}>
-			<div className="title" data-snippetId={props.snippet.id}>{props.snippet.title}</div>
-			<div className="desc" data-snippetId={props.snippet.id}>{props.snippet.desc}</div>
+		<div className="left" data-snippetId={props.snippet._id}>
+			<div className="title" data-snippetId={props.snippet._id}>{props.snippet.title}</div>
+			<div className="desc" data-snippetId={props.snippet._id}>{props.snippet.desc}</div>
 		</div>
-		<div className="right" data-snippetId={props.snippet.id}>
-			<div className="type" data-snippetId={props.snippet.id}>{props.snippet.type}</div>
-			<div className="lang" data-snippetId={props.snippet.id}>{props.snippet.lang}</div>
+		<div className="right" data-snippetId={props.snippet._id}>
+			<div className="type" data-snippetId={props.snippet._id}>{props.snippet.type}</div>
+			<div className="lang" data-snippetId={props.snippet._id}>{props.snippet.lang}</div>
 		</div>
 	</div>
 )
