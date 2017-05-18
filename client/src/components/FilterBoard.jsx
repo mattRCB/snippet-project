@@ -7,23 +7,19 @@ import SearchFilter from './SearchFilter';
 import TagFilter from './TagFilter';
 
 
-class FilterBoard extends Component {
-	constructor() {
-		super();
+const FilterBoard = (props) => (
+	<div className="FilterBoard">
+		<PrivacyFilter />
+		<LanguageFilter lang={props.lang} chngLangFilter={props.chngLangFilter}/>
+		<FrameworkFilter />
+		<TagFilter />
+		<SearchFilter />
+	</div>
+)
 
-	}
-
-	render() {
-		return (
-			<div className="FilterBoard">
-				<PrivacyFilter />
-				<LanguageFilter />
-				<FrameworkFilter />
-				<TagFilter />
-				<SearchFilter />
-			</div>
-		)
-	}
+FilterBoard.propTypes = {
+	lang: React.PropTypes.string.isRequired,
+	chngLangFilter: React.PropTypes.func.isRequired
 }
 
 export default FilterBoard;

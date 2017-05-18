@@ -15,11 +15,11 @@ class FrameworkFilter extends Component {
 				<h5>Framework:</h5>
 				<select>
 					<option value="All">All</option>
-					<option value="ReactJS">JavaScript</option>
-					<option value="Ruby on Rails">Ruby</option>
-					<option value="Django">Python</option>
-					<option value="Laravel">Java</option>
-					<option value="Flask">C++</option>
+					<option value="ReactJS">ReactJS</option>
+					<option value="Ruby on Rails">Ruby on Rails</option>
+					<option value="Django">Django</option>
+					<option value="Laravel">Laravel</option>
+					<option value="Flask">Flask</option>
 				</select>
 			</div>
 		)
