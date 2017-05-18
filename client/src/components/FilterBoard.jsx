@@ -11,7 +11,7 @@ const FilterBoard = (props) => (
 	<div className="FilterBoard">
 		<PrivacyFilter />
 		<LanguageFilter lang={props.lang} chngLangFilter={props.chngLangFilter}/>
-		<FrameworkFilter />
+		<FrameworkFilter framework={props.framework} chngFrameworkFilter={props.chngFrameworkFilter}/>
 		<TagFilter />
 		<SearchFilter />
 	</div>
@@ -19,7 +19,9 @@ const FilterBoard = (props) => (
 
 FilterBoard.propTypes = {
 	lang: React.PropTypes.string.isRequired,
-	chngLangFilter: React.PropTypes.func.isRequired
+	chngLangFilter: React.PropTypes.func.isRequired,
+	framework: React.PropTypes.string.isRequired,
+	chngFrameworkFilter: React.PropTypes.func.isRequired	
 }
 
 export default FilterBoard;

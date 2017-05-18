@@ -22,12 +22,14 @@ class App extends Component {
 					_id: "590cddce8cae850011340d33"
 				}
 			],
-			langFilter: "All"
+			langFilter: "All",
+			frameworkFilter: "All"
 		}
 
 		// REMEMBER TO .bind(this) ON ALL METHODS HERE:
 		this.selectSnippet = this.selectSnippet.bind(this)
 		this.chngLangFilter = this.chngLangFilter.bind(this)
+		this.chngFrameworkFilter = this.chngFrameworkFilter.bind(this)
 
 	}
 
@@ -39,9 +41,9 @@ class App extends Component {
 
 	componentDidUpdate() {
 		console.log(this.state.selectedSnippetID)
-		console.log(this.state.snippets)
-		console.log(this.state.langFilter)
-
+		console.log(`selectedSnippetID: ${this.state.snippets}`)
+		console.log(`langFilter: ${this.state.langFilter}`)
+		console.log(`frameworkFilter: ${this.state.frameworkFilter}`)
 	}
 
 	selectSnippet(evt) {
@@ -55,12 +57,20 @@ class App extends Component {
 		this.setState({ langFilter: evt.target.value })
 	}
 
+	chngFrameworkFilter(evt) {
+		this.setState({ frameworkFilter: evt.target.value })
+	}
 
 	render() {
 		return (
 			<div className="App">
 				<Header />
-				<FilterBoard lang={this.state.langFilter} chngLangFilter={this.chngLangFilter}/>
+				<FilterBoard
+					lang={this.state.langFilter}
+					chngLangFilter={this.chngLangFilter}
+					framework={this.state.frameworkFilter}
+					chngFrameworkFilter={this.chngFrameworkFilter}
+				/>
 				<SelectorList
 					selectSnippet={this.selectSnippet}
 					snippets={this.state.snippets}
