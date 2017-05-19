@@ -15,7 +15,6 @@ dbConnection.connectToServer(function(err) {
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: false }));
 
-
 	app.use(express.static(path.join(__dirname, '/client/dist')));
 
 	app.use(function(req, res, next) {
@@ -25,8 +24,6 @@ dbConnection.connectToServer(function(err) {
 		next();
 	});
 
-
-
 	// API ROUTES...
 	app.get('/snippets', function(req, res) {
 		db.collection('snippets').find().toArray(function(error, allSnippets) {
@@ -35,10 +32,8 @@ dbConnection.connectToServer(function(err) {
 	});
 
 	app.post('/addsnippet', function(req, res) {
-
-		db.collection('snippets').insert(req.body, function(err, result) {
-			res.json(result)
-
+		db.collection('snippets').insert(req.body, function(error, result) {
+			error ? console.log(error) : res.json(result);
 		});
 	});
 

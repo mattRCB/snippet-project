@@ -15,11 +15,7 @@ class App extends Component {
 		this.state = {
 			selectedSnippetID: "590cddce8cae850011340d33",
 			snippets: [
-				{
-					body: "import SelectorList from './SelectorList'",
-					desc: "This is a description",
-					title: "Snippet Test",
-					_id: "590cddce8cae850011340d33"
+				{ body: "import SelectorList from './SelectorList'", desc: "This is a description", title: "Snippet Test", _id: "590cddce8cae850011340d33"
 				}
 			],
 			langFilter: "All",
@@ -40,8 +36,8 @@ class App extends Component {
 	}
 
 	componentDidUpdate() {
-		console.log(this.state.selectedSnippetID)
-		console.log(`selectedSnippetID: ${this.state.snippets}`)
+		console.log(this.state.snippets)
+		console.log(`selectedSnippetID: ${this.state.selectedSnippetID}`)
 		console.log(`langFilter: ${this.state.langFilter}`)
 		console.log(`frameworkFilter: ${this.state.frameworkFilter}`)
 	}
